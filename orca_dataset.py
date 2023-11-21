@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from torch.utils.data import Dataset
 import transformers as t
 import datasets as d
@@ -35,18 +29,4 @@ class OrcaDataset(Dataset):
 
     def max_seq_len(self):
         return max([len(elm["input_ids"]) for elm in self.ds])
-
-
-# In[ ]:
-
-
-train_ds = OrcaDataset()
-
-print(train_ds[0])
-
-
-# In[ ]:
-
-
-
 
